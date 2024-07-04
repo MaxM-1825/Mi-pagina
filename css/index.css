@@ -1,0 +1,178 @@
+header{
+    color: white;
+    text-align: center;
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+}
+
+#menu_principal{
+    list-style: none;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c0846;
+    float: center;
+    color: #FFFF80;
+    font-size: 20px;
+}
+
+.opciones{
+    display: inline-block;/*bagones uno atras de otro*/
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: 0 1.5rem;
+    font-size: 16px;/*tamaño letra*/
+}
+
+#menu_principal #desplegar{
+    display: none;/*oculta o muestra cosas*/
+}
+
+#menu_principal a:hover {
+    background-color: #E49BFF;
+}
+
+.logo
+{
+    width: 40px;
+    margin: 0;
+}
+.logo img
+{
+    width: 100%;/*respecto a el logo 40px la imagen medira el 100%*/
+}
+
+/* fin del menu */
+#fondo{
+    background-color: rgba(121, 21, 21, 0.4);
+}
+
+.danza{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0,.4);
+    background-image: url(../img/baile2.jpg) center no-repeat;
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+.inicio{
+    background-color: mediumvioletred;
+}
+
+.inicio h4{
+    color: gold;
+    text-align: center;
+    font-size: 50px;
+}
+
+.inicio p{
+    color: aquamarine;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Inicio del footer*/
+footer
+{
+    width: 100%;
+    background-color: #293462;
+    height: 70px;
+    color: #ec9b3b;
+}
+#redes, footer>span
+{
+    width: 50%;
+    display: inline-block;
+}
+#redes
+{
+    text-align: right;
+    padding: 10px 0px 10px;
+}
+#redes a
+{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ec9b3b;
+}
+footer>span{
+    font-size: 1rem;
+    color: #f1f1f1;
+    text-align: right;
+}
+
+head, footer, #conteido_central/*esta regral se refiere a estas cajas para que no se pueda hacer pequeño cuando el usuario lo quiera*/
+{
+    min-width: 320px;
+}
+
+/*reglas para el celular:*/
+
+@media screen and (max-width:480px)/*cuando seal el maximo de 480px*/
+{
+    /*body
+    {
+        background-color: #000;
+    }*/
+    .cabecera
+    {
+        position: absolute;
+        background-color: #293462;
+        top: -30px;
+        left: 0px;
+        width: 100%;
+        min-width: 320px;
+    }
+    #menu_principal
+    {
+        position: absolute;
+        background-color: #293462;
+        top: -55px;
+        left: 0px;
+        width: 100%;
+        min-width: 320px;
+    }
+    #menu_principal a
+    {
+        display: block;
+        color: #fff;
+    }
+    #menu_principal #desplegar/*es para que el menu desaparesca en el tamaño celular*/
+    { 
+    display: block;
+    padding: 0;
+    border: 0;
+    font: bold 2rem verdana,sans-serif;
+    }
+
+    #menu_principal:hover
+    {
+        top: 8px;
+    }
+
+    #menu_principal a:hover:not(desplegar)
+    {
+        border-color: #f1f1f1;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    #menu_principal
+    {
+        transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+    }
+    footer>span 
+    {
+        display: none;
+    }
+    footer #redes
+    {
+        text-align: center;
+        width: 100%;
+    }
+}
